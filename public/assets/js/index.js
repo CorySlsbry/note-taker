@@ -56,22 +56,20 @@ const deleteNote = (id) =>
 		},
 	});
 
-// displays active note on right column
 const renderActiveNote = () => {
-	hide(saveNoteBtn);
+  hide(saveNoteBtn);
 
-	// if active note exists, display note
-	if (activeNote.id) {
-        noteTitle.setAttribute('data-id', activeNote.id);
-		noteTitle.value = activeNote.title;
-		noteText.value = activeNote.text;
-	}
-	// else use placeholder text
-	else {
-        noteTitle.removeAttribute('data-id');
-		noteTitle.value = '';
-		noteText.value = '';
-	}
+  if (activeNote.id) {
+    noteTitle.setAttribute('readonly', true);
+    noteText.setAttribute('readonly', true);
+    noteTitle.value = activeNote.title;
+    noteText.value = activeNote.text;
+  } else {
+    noteTitle.removeAttribute('readonly');
+    noteText.removeAttribute('readonly');
+    noteTitle.value = '';
+    noteText.value = '';
+  }
 };
 
 const handleNoteSave = () => {
