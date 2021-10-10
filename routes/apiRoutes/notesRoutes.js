@@ -1,5 +1,4 @@
 const router = require('express').Router();
-const {v4: uuidv4} = require('uuid');
 const {notes} = require('../../db/db.json');
 const {newNote, findById, editNote, removeNote} = require('../../lib/notes');
 
@@ -11,7 +10,7 @@ router.get('/notes', (req, res) => {
 router.post('/notes', (req, res) => {
 
     if (!req.body.id) {
-        req.body.id = uuidv4();
+        req.body.id = notes.length.toString();
         newNote(req.body, notes);
     } else {
         editNote(req.body, notes);
