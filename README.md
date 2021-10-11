@@ -27,13 +27,13 @@ View the deployed page at [Note Taker](https://note-taker-1980.herokuapp.com/not
 <br />
     
 ### Screenshots
-![Splash Page Screenshot](./public/assets/images/screenshot1.png)
-Splash page for the Note Taker application.
+![Screenshot 1](./public/assets/images/screenshot1.png)
+
 
 <br />
 
-![Note Taker Screenshot](./public/assets/images/screenshot2.png)
-The Note Taker application in use.
+![Screenshot 2](./public/assets/images/screenshot2.png)
+
 
 <br />
 
@@ -42,7 +42,7 @@ The Note Taker application in use.
 * Express.js
 * JavaScript
 * HTML/CSS
-* [BootStrap](https://getbootstrap.com/)
+* Bootstrap
 
 <br />
 
